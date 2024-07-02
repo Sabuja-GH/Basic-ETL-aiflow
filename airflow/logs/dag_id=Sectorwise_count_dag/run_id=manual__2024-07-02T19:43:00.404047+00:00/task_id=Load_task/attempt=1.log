@@ -1,0 +1,20 @@
+[2024-07-02T19:43:10.519+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-02T19:43:10.538+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:43:00.404047+00:00 [queued]>
+[2024-07-02T19:43:10.543+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:43:00.404047+00:00 [queued]>
+[2024-07-02T19:43:10.543+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-07-02T19:43:10.579+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): Load_task> on 2024-07-02 19:43:00.404047+00:00
+[2024-07-02T19:43:10.582+0000] {standard_task_runner.py:63} INFO - Started process 20930 to run task
+[2024-07-02T19:43:10.585+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py', '--cfg-path', '/tmp/tmp66rjpcd5']
+[2024-07-02T19:43:10.586+0000] {standard_task_runner.py:91} INFO - Job 11: Subtask Load_task
+[2024-07-02T19:43:10.633+0000] {task_command.py:426} INFO - Running <TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:43:00.404047+00:00 [running]> on host codespaces-3512fc
+[2024-07-02T19:43:10.740+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Sabuja' AIRFLOW_CTX_DAG_ID='Sectorwise_count_dag' AIRFLOW_CTX_TASK_ID='Load_task' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T19:43:00.404047+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-02T19:43:00.404047+00:00'
+[2024-07-02T19:43:10.741+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-02T19:43:10.742+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-07-02T19:43:10.742+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo -e ".separator ","\n.import --skip 1 /workspaces/Basic-ETL-aiflow/airflow/lab/challenge_agg_data.csv Sector_counts" | sqlite3 /workspaces/Basic-ETL-aiflow/airflow/lab/challenge.db']
+[2024-07-02T19:43:10.751+0000] {subprocess.py:86} INFO - Output:
+[2024-07-02T19:43:10.782+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-07-02T19:43:10.783+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-02T19:43:10.821+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Sectorwise_count_dag, task_id=Load_task, run_id=manual__2024-07-02T19:43:00.404047+00:00, execution_date=20240702T194300, start_date=20240702T194310, end_date=20240702T194310
+[2024-07-02T19:43:10.877+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-02T19:43:10.886+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T19:43:10.887+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

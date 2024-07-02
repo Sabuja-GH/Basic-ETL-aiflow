@@ -1,0 +1,31 @@
+[2024-07-02T19:43:03.924+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-02T19:43:03.952+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:43:00.404047+00:00 [queued]>
+[2024-07-02T19:43:03.958+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:43:00.404047+00:00 [queued]>
+[2024-07-02T19:43:03.958+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-07-02T19:43:03.997+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): Extract_task> on 2024-07-02 19:43:00.404047+00:00
+[2024-07-02T19:43:04.001+0000] {standard_task_runner.py:63} INFO - Started process 20890 to run task
+[2024-07-02T19:43:04.003+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py', '--cfg-path', '/tmp/tmp91bts0ep']
+[2024-07-02T19:43:04.004+0000] {standard_task_runner.py:91} INFO - Job 9: Subtask Extract_task
+[2024-07-02T19:43:04.091+0000] {task_command.py:426} INFO - Running <TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:43:00.404047+00:00 [running]> on host codespaces-3512fc
+[2024-07-02T19:43:04.195+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Sabuja' AIRFLOW_CTX_DAG_ID='Sectorwise_count_dag' AIRFLOW_CTX_TASK_ID='Extract_task' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T19:43:00.404047+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-02T19:43:00.404047+00:00'
+[2024-07-02T19:43:04.196+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-02T19:43:04.197+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-07-02T19:43:04.197+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'wget -c https://raw.githubusercontent.com/LinkedInLearning/hands-on-introduction-data-engineering-4395021/main/data/constituents.csv -O /workspaces/Basic-ETL-aiflow/airflow/lab/challenge.csv']
+[2024-07-02T19:43:04.205+0000] {subprocess.py:86} INFO - Output:
+[2024-07-02T19:43:04.209+0000] {subprocess.py:93} INFO - --2024-07-02 19:43:04--  https://raw.githubusercontent.com/LinkedInLearning/hands-on-introduction-data-engineering-4395021/main/data/constituents.csv
+[2024-07-02T19:43:04.212+0000] {subprocess.py:93} INFO - Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.108.133, 185.199.110.133, ...
+[2024-07-02T19:43:04.263+0000] {subprocess.py:93} INFO - Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
+[2024-07-02T19:43:04.749+0000] {subprocess.py:93} INFO - HTTP request sent, awaiting response... 200 OK
+[2024-07-02T19:43:04.749+0000] {subprocess.py:93} INFO - Length: 18676 (18K) [text/plain]
+[2024-07-02T19:43:04.750+0000] {subprocess.py:93} INFO - Saving to: ‘/workspaces/Basic-ETL-aiflow/airflow/lab/challenge.csv’
+[2024-07-02T19:43:04.750+0000] {subprocess.py:93} INFO - 
+[2024-07-02T19:43:04.757+0000] {subprocess.py:93} INFO -      0K .......... ........                                   100% 2.53M=0.007s
+[2024-07-02T19:43:04.758+0000] {subprocess.py:93} INFO - 
+[2024-07-02T19:43:04.759+0000] {subprocess.py:93} INFO - 2024-07-02 19:43:04 (2.53 MB/s) - ‘/workspaces/Basic-ETL-aiflow/airflow/lab/challenge.csv’ saved [18676/18676]
+[2024-07-02T19:43:04.759+0000] {subprocess.py:93} INFO - 
+[2024-07-02T19:43:04.760+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-07-02T19:43:04.761+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-02T19:43:04.806+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Sectorwise_count_dag, task_id=Extract_task, run_id=manual__2024-07-02T19:43:00.404047+00:00, execution_date=20240702T194300, start_date=20240702T194303, end_date=20240702T194304
+[2024-07-02T19:43:04.862+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-02T19:43:04.877+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T19:43:04.904+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

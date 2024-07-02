@@ -39,9 +39,19 @@ In the dag we could have use the sql codes but it can be done with bash operator
 
 bash_command="echo -e ".separator ","\n.import --skip 1 /workspaces/Basic-ETL-aiflow/airflow/lab/extract-data.csv domains" | sqlite3 /workspaces/Basic-ETL-aiflow/airflow/lab/load.db",
 
+This command sets the field separator to a comma and imports data from extract-data.csv into the domains table in the load.db SQLite database, skipping the first row of the CSV file.
+
+The given bash_command aims to import data from a CSV file into an SQLite database using sqlite3. Here's a breakdown of the command:
+
+echo -e: This command will enable the interpretation of backslash escapes.
+".separator ","\n.import --skip 1 /workspaces/Basic-ETL-aiflow/airflow/lab/extract-data.csv domains": This is the text to be echoed, consisting of:
+.separator ",": This sets the field separator to a comma.
+.import --skip 1 /workspaces/Basic-ETL-aiflow/airflow/lab/extract-data.csv domains: This imports the CSV file, skipping the first row (usually headers), into the domains table of the SQLite database.
+| sqlite3 /workspaces/Basic-ETL-aiflow/airflow/lab/load.db: The output of the echo command is piped into the sqlite3 command, which executes it on the specified database.
 
 
 
+python -W ignore /workspaces/Basic-ETL-aiflow/airflow/dags/Load_dag.py
 
 
 

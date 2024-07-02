@@ -20,5 +20,8 @@ airflow scheduler -D
 Kill scheduler and webserver. again run them.
 
 
+create folder dags in airlfow
+
+
  
 

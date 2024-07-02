@@ -1,0 +1,159 @@
+2024-07-02 19:09:12,112 INFO - Task context logging is enabled
+2024-07-02 19:09:12,113 INFO - Loaded executor: SequentialExecutor
+2024-07-02 19:09:12,189 INFO - Starting the scheduler
+2024-07-02 19:09:12,190 INFO - Processing each file at most -1 times
+2024-07-02 19:09:12,206 INFO - Launched DagFileProcessorManager with pid: 4764
+2024-07-02 19:09:12,208 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-02 19:09:12,211 INFO - Configured default timezone UTC
+2024-07-02 19:09:35,186 INFO - Exiting gracefully upon receiving signal 15
+2024-07-02 19:09:36,189 INFO - Sending Signals.SIGTERM to group 4764. PIDs of all processes in the group: [4764]
+2024-07-02 19:09:36,190 INFO - Sending the signal Signals.SIGTERM to group 4764
+2024-07-02 19:09:36,368 INFO - Process psutil.Process(pid=4764, status='terminated', exitcode=0, started='19:09:12') (4764) terminated with exit code 0
+2024-07-02 19:09:36,370 INFO - Sending Signals.SIGTERM to group 4764. PIDs of all processes in the group: []
+2024-07-02 19:09:36,370 INFO - Sending the signal Signals.SIGTERM to group 4764
+2024-07-02 19:09:36,370 INFO - Sending the signal Signals.SIGTERM to process 4764 as process group is missing.
+2024-07-02 19:09:36,370 INFO - Exited execute loop
+2024-07-02 19:10:07,894 INFO - Task context logging is enabled
+2024-07-02 19:10:07,895 INFO - Loaded executor: SequentialExecutor
+2024-07-02 19:10:07,964 INFO - Starting the scheduler
+2024-07-02 19:10:07,965 INFO - Processing each file at most -1 times
+2024-07-02 19:10:07,970 INFO - Launched DagFileProcessorManager with pid: 5456
+2024-07-02 19:10:07,971 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-02 19:10:07,977 INFO - Configured default timezone UTC
+2024-07-02 19:15:08,687 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-02 19:20:08,828 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-02 19:25:08,988 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-02 19:30:09,256 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-02 19:35:09,416 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-02 19:36:03,340 INFO - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:36:02.856092+00:00 [scheduled]>
+2024-07-02 19:36:03,340 INFO - DAG Sectorwise_count_dag has 0/16 running and queued tasks
+2024-07-02 19:36:03,340 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:36:02.856092+00:00 [scheduled]>
+2024-07-02 19:36:03,342 INFO - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:36:02.856092+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2024-07-02 19:36:03,343 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:36:02.856092+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:36:03,371 INFO - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:36:02.856092+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:36:06,851 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:36:02.856092+00:00', try_number=1, map_index=-1)
+2024-07-02 19:36:06,860 INFO - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Extract_task, run_id=manual__2024-07-02T19:36:02.856092+00:00, map_index=-1, run_start_date=2024-07-02 19:36:05.449969+00:00, run_end_date=2024-07-02 19:36:06.405239+00:00, run_duration=0.95527, state=success, executor_state=success, try_number=1, max_tries=0, job_id=3, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-07-02 19:36:03.341439+00:00, queued_by_job_id=2, pid=17709
+2024-07-02 19:36:07,058 INFO - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:36:02.856092+00:00 [scheduled]>
+2024-07-02 19:36:07,059 INFO - DAG Sectorwise_count_dag has 0/16 running and queued tasks
+2024-07-02 19:36:07,059 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:36:02.856092+00:00 [scheduled]>
+2024-07-02 19:36:07,060 INFO - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:36:02.856092+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-07-02 19:36:07,060 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Transform_task', 'manual__2024-07-02T19:36:02.856092+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:36:07,087 INFO - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Transform_task', 'manual__2024-07-02T19:36:02.856092+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:36:09,618 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:36:02.856092+00:00', try_number=1, map_index=-1)
+2024-07-02 19:36:09,621 INFO - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Transform_task, run_id=manual__2024-07-02T19:36:02.856092+00:00, map_index=-1, run_start_date=2024-07-02 19:36:09.014202+00:00, run_end_date=2024-07-02 19:36:09.223335+00:00, run_duration=0.209133, state=success, executor_state=success, try_number=1, max_tries=0, job_id=4, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2024-07-02 19:36:07.059774+00:00, queued_by_job_id=2, pid=17745
+2024-07-02 19:36:09,785 INFO - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:36:02.856092+00:00 [scheduled]>
+2024-07-02 19:36:09,786 INFO - DAG Sectorwise_count_dag has 0/16 running and queued tasks
+2024-07-02 19:36:09,786 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:36:02.856092+00:00 [scheduled]>
+2024-07-02 19:36:09,788 INFO - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Load_task', run_id='manual__2024-07-02T19:36:02.856092+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-02 19:36:09,788 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:36:02.856092+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:36:09,818 INFO - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:36:02.856092+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:36:12,485 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Load_task', run_id='manual__2024-07-02T19:36:02.856092+00:00', try_number=1, map_index=-1)
+2024-07-02 19:36:12,490 INFO - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Load_task, run_id=manual__2024-07-02T19:36:02.856092+00:00, map_index=-1, run_start_date=2024-07-02 19:36:11.877978+00:00, run_end_date=2024-07-02 19:36:12.088348+00:00, run_duration=0.21037, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=5, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-02 19:36:09.787099+00:00, queued_by_job_id=2, pid=17762
+2024-07-02 19:36:12,661 ERROR - Marking run <DagRun Sectorwise_count_dag @ 2024-07-02 19:36:02.856092+00:00: manual__2024-07-02T19:36:02.856092+00:00, state:running, queued_at: 2024-07-02 19:36:02.895183+00:00. externally triggered: True> failed
+2024-07-02 19:36:12,661 INFO - DagRun Finished: dag_id=Sectorwise_count_dag, execution_date=2024-07-02 19:36:02.856092+00:00, run_id=manual__2024-07-02T19:36:02.856092+00:00, run_start_date=2024-07-02 19:36:03.258055+00:00, run_end_date=2024-07-02 19:36:12.661618+00:00, run_duration=9.403563, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-07-02 19:36:02.856092+00:00, data_interval_end=2024-07-02 19:36:02.856092+00:00, dag_hash=75e45840807a4ff7619ab589b77e1b7f
+2024-07-02 19:39:50,215 INFO - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:39:49.461134+00:00 [scheduled]>
+2024-07-02 19:39:50,216 INFO - DAG Sectorwise_count_dag has 0/16 running and queued tasks
+2024-07-02 19:39:50,217 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:39:49.461134+00:00 [scheduled]>
+2024-07-02 19:39:50,220 INFO - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:39:49.461134+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2024-07-02 19:39:50,221 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:39:49.461134+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:39:50,249 INFO - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:39:49.461134+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:39:53,203 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:39:49.461134+00:00', try_number=1, map_index=-1)
+2024-07-02 19:39:53,206 INFO - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Extract_task, run_id=manual__2024-07-02T19:39:49.461134+00:00, map_index=-1, run_start_date=2024-07-02 19:39:52.250123+00:00, run_end_date=2024-07-02 19:39:52.757530+00:00, run_duration=0.507407, state=success, executor_state=success, try_number=1, max_tries=0, job_id=6, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-07-02 19:39:50.217813+00:00, queued_by_job_id=2, pid=19366
+2024-07-02 19:39:53,400 INFO - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:39:49.461134+00:00 [scheduled]>
+2024-07-02 19:39:53,401 INFO - DAG Sectorwise_count_dag has 0/16 running and queued tasks
+2024-07-02 19:39:53,401 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:39:49.461134+00:00 [scheduled]>
+2024-07-02 19:39:53,403 INFO - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:39:49.461134+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-07-02 19:39:53,403 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Transform_task', 'manual__2024-07-02T19:39:49.461134+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:39:53,429 INFO - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Transform_task', 'manual__2024-07-02T19:39:49.461134+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:39:56,075 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:39:49.461134+00:00', try_number=1, map_index=-1)
+2024-07-02 19:39:56,079 INFO - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Transform_task, run_id=manual__2024-07-02T19:39:49.461134+00:00, map_index=-1, run_start_date=2024-07-02 19:39:55.465232+00:00, run_end_date=2024-07-02 19:39:55.673530+00:00, run_duration=0.208298, state=success, executor_state=success, try_number=1, max_tries=0, job_id=7, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2024-07-02 19:39:53.402037+00:00, queued_by_job_id=2, pid=19383
+2024-07-02 19:39:56,354 INFO - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:39:49.461134+00:00 [scheduled]>
+2024-07-02 19:39:56,354 INFO - DAG Sectorwise_count_dag has 0/16 running and queued tasks
+2024-07-02 19:39:56,355 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:39:49.461134+00:00 [scheduled]>
+2024-07-02 19:39:56,356 INFO - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Load_task', run_id='manual__2024-07-02T19:39:49.461134+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-02 19:39:56,357 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:39:49.461134+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:39:56,383 INFO - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:39:49.461134+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:39:59,058 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Load_task', run_id='manual__2024-07-02T19:39:49.461134+00:00', try_number=1, map_index=-1)
+2024-07-02 19:39:59,061 INFO - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Load_task, run_id=manual__2024-07-02T19:39:49.461134+00:00, map_index=-1, run_start_date=2024-07-02 19:39:58.402321+00:00, run_end_date=2024-07-02 19:39:58.679801+00:00, run_duration=0.27748, state=success, executor_state=success, try_number=1, max_tries=0, job_id=8, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-02 19:39:56.355520+00:00, queued_by_job_id=2, pid=19400
+2024-07-02 19:39:59,323 INFO - Marking run <DagRun Sectorwise_count_dag @ 2024-07-02 19:39:49.461134+00:00: manual__2024-07-02T19:39:49.461134+00:00, state:running, queued_at: 2024-07-02 19:39:49.470314+00:00. externally triggered: True> successful
+2024-07-02 19:39:59,324 INFO - DagRun Finished: dag_id=Sectorwise_count_dag, execution_date=2024-07-02 19:39:49.461134+00:00, run_id=manual__2024-07-02T19:39:49.461134+00:00, run_start_date=2024-07-02 19:39:50.132870+00:00, run_end_date=2024-07-02 19:39:59.323957+00:00, run_duration=9.191087, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-07-02 19:39:49.461134+00:00, data_interval_end=2024-07-02 19:39:49.461134+00:00, dag_hash=75e45840807a4ff7619ab589b77e1b7f
+2024-07-02 19:40:09,605 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-02 19:43:01,865 INFO - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:43:00.404047+00:00 [scheduled]>
+2024-07-02 19:43:01,866 INFO - DAG Sectorwise_count_dag has 0/16 running and queued tasks
+2024-07-02 19:43:01,866 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:43:00.404047+00:00 [scheduled]>
+2024-07-02 19:43:01,867 INFO - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:43:00.404047+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2024-07-02 19:43:01,868 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:43:01,895 INFO - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:43:05,198 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:43:00.404047+00:00', try_number=1, map_index=-1)
+2024-07-02 19:43:05,202 INFO - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Extract_task, run_id=manual__2024-07-02T19:43:00.404047+00:00, map_index=-1, run_start_date=2024-07-02 19:43:03.952437+00:00, run_end_date=2024-07-02 19:43:04.806646+00:00, run_duration=0.854209, state=success, executor_state=success, try_number=1, max_tries=0, job_id=9, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-07-02 19:43:01.866826+00:00, queued_by_job_id=2, pid=20890
+2024-07-02 19:43:05,677 INFO - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:43:00.404047+00:00 [scheduled]>
+2024-07-02 19:43:05,677 INFO - DAG Sectorwise_count_dag has 0/16 running and queued tasks
+2024-07-02 19:43:05,678 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:43:00.404047+00:00 [scheduled]>
+2024-07-02 19:43:05,679 INFO - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:43:00.404047+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-07-02 19:43:05,679 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Transform_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:43:05,711 INFO - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Transform_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:43:08,334 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:43:00.404047+00:00', try_number=1, map_index=-1)
+2024-07-02 19:43:08,339 INFO - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Transform_task, run_id=manual__2024-07-02T19:43:00.404047+00:00, map_index=-1, run_start_date=2024-07-02 19:43:07.714422+00:00, run_end_date=2024-07-02 19:43:07.924575+00:00, run_duration=0.210153, state=success, executor_state=success, try_number=1, max_tries=0, job_id=10, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2024-07-02 19:43:05.678608+00:00, queued_by_job_id=2, pid=20914
+2024-07-02 19:43:08,541 INFO - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:43:00.404047+00:00 [scheduled]>
+2024-07-02 19:43:08,541 INFO - DAG Sectorwise_count_dag has 0/16 running and queued tasks
+2024-07-02 19:43:08,542 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:43:00.404047+00:00 [scheduled]>
+2024-07-02 19:43:08,543 INFO - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Load_task', run_id='manual__2024-07-02T19:43:00.404047+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-02 19:43:08,543 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:43:08,570 INFO - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py']
+2024-07-02 19:43:11,188 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Load_task', run_id='manual__2024-07-02T19:43:00.404047+00:00', try_number=1, map_index=-1)
+2024-07-02 19:43:11,191 INFO - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Load_task, run_id=manual__2024-07-02T19:43:00.404047+00:00, map_index=-1, run_start_date=2024-07-02 19:43:10.539096+00:00, run_end_date=2024-07-02 19:43:10.821932+00:00, run_duration=0.282836, state=success, executor_state=success, try_number=1, max_tries=0, job_id=11, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-02 19:43:08.542750+00:00, queued_by_job_id=2, pid=20930
+2024-07-02 19:43:11,323 INFO - Marking run <DagRun Sectorwise_count_dag @ 2024-07-02 19:43:00.404047+00:00: manual__2024-07-02T19:43:00.404047+00:00, state:running, queued_at: 2024-07-02 19:43:00.412672+00:00. externally triggered: True> successful
+2024-07-02 19:43:11,323 INFO - DagRun Finished: dag_id=Sectorwise_count_dag, execution_date=2024-07-02 19:43:00.404047+00:00, run_id=manual__2024-07-02T19:43:00.404047+00:00, run_start_date=2024-07-02 19:43:01.795686+00:00, run_end_date=2024-07-02 19:43:11.323793+00:00, run_duration=9.528107, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-07-02 19:43:00.404047+00:00, data_interval_end=2024-07-02 19:43:00.404047+00:00, dag_hash=75e45840807a4ff7619ab589b77e1b7f
+2024-07-02 19:45:09,765 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-02 19:50:09,930 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-02 19:55:10,495 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-07-02 19:56:49,459 INFO - 1 tasks up for execution:
+	<TaskInstance: ETL_dag.Extract_task manual__2024-07-02T19:56:48.745964+00:00 [scheduled]>
+2024-07-02 19:56:49,459 INFO - DAG ETL_dag has 0/16 running and queued tasks
+2024-07-02 19:56:49,459 INFO - Setting the following tasks to queued state:
+	<TaskInstance: ETL_dag.Extract_task manual__2024-07-02T19:56:48.745964+00:00 [scheduled]>
+2024-07-02 19:56:49,461 INFO - Sending TaskInstanceKey(dag_id='ETL_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:56:48.745964+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2024-07-02 19:56:49,461 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'ETL_dag', 'Extract_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--local', '--subdir', 'DAGS_FOLDER/ETL_dag.py']
+2024-07-02 19:56:49,488 INFO - Executing command: ['airflow', 'tasks', 'run', 'ETL_dag', 'Extract_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--local', '--subdir', 'DAGS_FOLDER/ETL_dag.py']
+2024-07-02 19:56:52,766 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='ETL_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:56:48.745964+00:00', try_number=1, map_index=-1)
+2024-07-02 19:56:52,769 INFO - TaskInstance Finished: dag_id=ETL_dag, task_id=Extract_task, run_id=manual__2024-07-02T19:56:48.745964+00:00, map_index=-1, run_start_date=2024-07-02 19:56:51.518613+00:00, run_end_date=2024-07-02 19:56:52.334798+00:00, run_duration=0.816185, state=success, executor_state=success, try_number=1, max_tries=0, job_id=12, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-07-02 19:56:49.460470+00:00, queued_by_job_id=2, pid=27177
+2024-07-02 19:56:52,977 INFO - 1 tasks up for execution:
+	<TaskInstance: ETL_dag.Transform_task manual__2024-07-02T19:56:48.745964+00:00 [scheduled]>
+2024-07-02 19:56:52,977 INFO - DAG ETL_dag has 0/16 running and queued tasks
+2024-07-02 19:56:52,978 INFO - Setting the following tasks to queued state:
+	<TaskInstance: ETL_dag.Transform_task manual__2024-07-02T19:56:48.745964+00:00 [scheduled]>
+2024-07-02 19:56:52,979 INFO - Sending TaskInstanceKey(dag_id='ETL_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:56:48.745964+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-07-02 19:56:52,979 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'ETL_dag', 'Transform_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--local', '--subdir', 'DAGS_FOLDER/ETL_dag.py']
+2024-07-02 19:56:53,008 INFO - Executing command: ['airflow', 'tasks', 'run', 'ETL_dag', 'Transform_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--local', '--subdir', 'DAGS_FOLDER/ETL_dag.py']
+2024-07-02 19:56:55,691 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='ETL_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:56:48.745964+00:00', try_number=1, map_index=-1)
+2024-07-02 19:56:55,694 INFO - TaskInstance Finished: dag_id=ETL_dag, task_id=Transform_task, run_id=manual__2024-07-02T19:56:48.745964+00:00, map_index=-1, run_start_date=2024-07-02 19:56:55.074437+00:00, run_end_date=2024-07-02 19:56:55.280383+00:00, run_duration=0.205946, state=success, executor_state=success, try_number=1, max_tries=0, job_id=13, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2024-07-02 19:56:52.978614+00:00, queued_by_job_id=2, pid=27195
+2024-07-02 19:56:55,855 INFO - 1 tasks up for execution:
+	<TaskInstance: ETL_dag.Load_task manual__2024-07-02T19:56:48.745964+00:00 [scheduled]>
+2024-07-02 19:56:55,856 INFO - DAG ETL_dag has 0/16 running and queued tasks
+2024-07-02 19:56:55,856 INFO - Setting the following tasks to queued state:
+	<TaskInstance: ETL_dag.Load_task manual__2024-07-02T19:56:48.745964+00:00 [scheduled]>
+2024-07-02 19:56:55,858 INFO - Sending TaskInstanceKey(dag_id='ETL_dag', task_id='Load_task', run_id='manual__2024-07-02T19:56:48.745964+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-07-02 19:56:55,858 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'ETL_dag', 'Load_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--local', '--subdir', 'DAGS_FOLDER/ETL_dag.py']
+2024-07-02 19:56:55,896 INFO - Executing command: ['airflow', 'tasks', 'run', 'ETL_dag', 'Load_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--local', '--subdir', 'DAGS_FOLDER/ETL_dag.py']
+2024-07-02 19:56:58,598 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='ETL_dag', task_id='Load_task', run_id='manual__2024-07-02T19:56:48.745964+00:00', try_number=1, map_index=-1)
+2024-07-02 19:56:58,601 INFO - TaskInstance Finished: dag_id=ETL_dag, task_id=Load_task, run_id=manual__2024-07-02T19:56:48.745964+00:00, map_index=-1, run_start_date=2024-07-02 19:56:57.896394+00:00, run_end_date=2024-07-02 19:56:58.173801+00:00, run_duration=0.277407, state=success, executor_state=success, try_number=1, max_tries=0, job_id=14, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-02 19:56:55.857310+00:00, queued_by_job_id=2, pid=27230
+2024-07-02 19:56:58,764 INFO - Marking run <DagRun ETL_dag @ 2024-07-02 19:56:48.745964+00:00: manual__2024-07-02T19:56:48.745964+00:00, state:running, queued_at: 2024-07-02 19:56:48.779967+00:00. externally triggered: True> successful
+2024-07-02 19:56:58,765 INFO - DagRun Finished: dag_id=ETL_dag, execution_date=2024-07-02 19:56:48.745964+00:00, run_id=manual__2024-07-02T19:56:48.745964+00:00, run_start_date=2024-07-02 19:56:49.383521+00:00, run_end_date=2024-07-02 19:56:58.765086+00:00, run_duration=9.381565, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-07-02 19:56:48.745964+00:00, data_interval_end=2024-07-02 19:56:48.745964+00:00, dag_hash=7e74db8a8c0a205ae15cf29ddbcb5f2d

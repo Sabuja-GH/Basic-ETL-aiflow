@@ -1,0 +1,20 @@
+[2024-07-02T19:56:57.877+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-02T19:56:57.896+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_dag.Load_task manual__2024-07-02T19:56:48.745964+00:00 [queued]>
+[2024-07-02T19:56:57.900+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_dag.Load_task manual__2024-07-02T19:56:48.745964+00:00 [queued]>
+[2024-07-02T19:56:57.900+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-07-02T19:56:57.935+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): Load_task> on 2024-07-02 19:56:48.745964+00:00
+[2024-07-02T19:56:57.938+0000] {standard_task_runner.py:63} INFO - Started process 27230 to run task
+[2024-07-02T19:56:57.941+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL_dag', 'Load_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/ETL_dag.py', '--cfg-path', '/tmp/tmp7bsf6buy']
+[2024-07-02T19:56:57.942+0000] {standard_task_runner.py:91} INFO - Job 14: Subtask Load_task
+[2024-07-02T19:56:57.991+0000] {task_command.py:426} INFO - Running <TaskInstance: ETL_dag.Load_task manual__2024-07-02T19:56:48.745964+00:00 [running]> on host codespaces-3512fc
+[2024-07-02T19:56:58.082+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Sabuja' AIRFLOW_CTX_DAG_ID='ETL_dag' AIRFLOW_CTX_TASK_ID='Load_task' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T19:56:48.745964+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-02T19:56:48.745964+00:00'
+[2024-07-02T19:56:58.083+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-02T19:56:58.084+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-07-02T19:56:58.084+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo -e ".separator ","\n.import --skip 1 /workspaces/Basic-ETL-aiflow/airflow/lab/extract-data.csv domains" | sqlite3 /workspaces/Basic-ETL-aiflow/airflow/lab/load.db']
+[2024-07-02T19:56:58.092+0000] {subprocess.py:86} INFO - Output:
+[2024-07-02T19:56:58.132+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-07-02T19:56:58.133+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-02T19:56:58.173+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ETL_dag, task_id=Load_task, run_id=manual__2024-07-02T19:56:48.745964+00:00, execution_date=20240702T195648, start_date=20240702T195657, end_date=20240702T195658
+[2024-07-02T19:56:58.233+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-02T19:56:58.277+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T19:56:58.277+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

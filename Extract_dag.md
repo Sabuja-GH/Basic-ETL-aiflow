@@ -20,6 +20,9 @@ https://raw.githubusercontent.com/LinkedInLearning/hands-on-introduction-data-en
 python -W ignore /workspaces/Basic-ETL-aiflow/airflow/dags/Extract_dag.py
 
 
+create a folder lab in airlfow
+
+
 
 
 
@@ -48,7 +51,7 @@ default_args = {
 dag = DAG(
     dag_id='Extract_task_dag', 
     default_args=default_args,
-    description='hello',
+    description='Extracts a csv file from web using wget bash operator and then saves the csv file in the location specified',
     schedule_interval=None,
 )
 # bash operatoe (used to run the commands to createthe file)

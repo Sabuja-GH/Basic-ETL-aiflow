@@ -25,6 +25,7 @@ with DAG(
         dag=dag (Associates this task with the DAG object dag) 
     ) 
 
+python -W ignore /workspaces/Basic-ETL-aiflow/airflow/dags/Transform_dag.py
   
 
 

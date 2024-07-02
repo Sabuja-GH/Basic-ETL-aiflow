@@ -1,0 +1,262 @@
+[[34m2024-07-02T19:10:07.894+0000[0m] {[34mtask_context_logger.py:[0m63} INFO[0m - Task context logging is enabled[0m
+[[34m2024-07-02T19:10:07.895+0000[0m] {[34mexecutor_loader.py:[0m235} INFO[0m - Loaded executor: SequentialExecutor[0m
+[[34m2024-07-02T19:10:07.964+0000[0m] {[34mscheduler_job_runner.py:[0m796} INFO[0m - Starting the scheduler[0m
+[[34m2024-07-02T19:10:07.965+0000[0m] {[34mscheduler_job_runner.py:[0m803} INFO[0m - Processing each file at most -1 times[0m
+[[34m2024-07-02T19:10:07.970+0000[0m] {[34mmanager.py:[0m170} INFO[0m - Launched DagFileProcessorManager with pid: 5456[0m
+[[34m2024-07-02T19:10:07.971+0000[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-07-02T19:10:07.977+0000[0m] {[34msettings.py:[0m60} INFO[0m - Configured default timezone UTC[0m
+[2024-07-02T19:10:08.016+0000] {manager.py:393} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2024-07-02T19:15:08.687+0000[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-07-02T19:20:08.828+0000[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[2024-07-02T19:20:14.145+0000] {manager.py:524} INFO - DAG ETL_dag is missing and will be deactivated.
+[2024-07-02T19:20:14.148+0000] {manager.py:536} INFO - Deactivated 1 DAGs which are no longer present in file.
+[2024-07-02T19:20:14.180+0000] {manager.py:540} INFO - Deleted DAG ETL_dag in serialized_dag table
+[[34m2024-07-02T19:25:08.988+0000[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-07-02T19:30:09.256+0000[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-07-02T19:35:09.416+0000[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-07-02T19:36:03.340+0000[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:36:02.856092+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:36:03.340+0000[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG Sectorwise_count_dag has 0/16 running and queued tasks[0m
+[[34m2024-07-02T19:36:03.340+0000[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:36:02.856092+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:36:03.342+0000[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:36:02.856092+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2024-07-02T19:36:03.343+0000[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:36:02.856092+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:36:03.371+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:36:02.856092+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:36:04.486+0000[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /workspaces/Basic-ETL-aiflow/airflow/dags/Top_sector_dag.py[0m
+[[34m2024-07-02T19:36:05.264+0000[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:36:05.286+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-07-02T19:36:05.287+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:36:05.326+0000[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:36:02.856092+00:00 [queued]> on host codespaces-3512fc[0m
+[[34m2024-07-02T19:36:06.851+0000[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:36:02.856092+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-07-02T19:36:06.860+0000[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Extract_task, run_id=manual__2024-07-02T19:36:02.856092+00:00, map_index=-1, run_start_date=2024-07-02 19:36:05.449969+00:00, run_end_date=2024-07-02 19:36:06.405239+00:00, run_duration=0.95527, state=success, executor_state=success, try_number=1, max_tries=0, job_id=3, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-07-02 19:36:03.341439+00:00, queued_by_job_id=2, pid=17709[0m
+[[34m2024-07-02T19:36:07.058+0000[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:36:02.856092+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:36:07.059+0000[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG Sectorwise_count_dag has 0/16 running and queued tasks[0m
+[[34m2024-07-02T19:36:07.059+0000[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:36:02.856092+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:36:07.060+0000[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:36:02.856092+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2024-07-02T19:36:07.060+0000[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Transform_task', 'manual__2024-07-02T19:36:02.856092+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:36:07.087+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Transform_task', 'manual__2024-07-02T19:36:02.856092+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:36:08.214+0000[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /workspaces/Basic-ETL-aiflow/airflow/dags/Top_sector_dag.py[0m
+[[34m2024-07-02T19:36:08.889+0000[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:36:08.909+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-07-02T19:36:08.909+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:36:08.948+0000[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:36:02.856092+00:00 [queued]> on host codespaces-3512fc[0m
+[[34m2024-07-02T19:36:09.618+0000[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:36:02.856092+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-07-02T19:36:09.621+0000[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Transform_task, run_id=manual__2024-07-02T19:36:02.856092+00:00, map_index=-1, run_start_date=2024-07-02 19:36:09.014202+00:00, run_end_date=2024-07-02 19:36:09.223335+00:00, run_duration=0.209133, state=success, executor_state=success, try_number=1, max_tries=0, job_id=4, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2024-07-02 19:36:07.059774+00:00, queued_by_job_id=2, pid=17745[0m
+[[34m2024-07-02T19:36:09.785+0000[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:36:02.856092+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:36:09.786+0000[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG Sectorwise_count_dag has 0/16 running and queued tasks[0m
+[[34m2024-07-02T19:36:09.786+0000[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:36:02.856092+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:36:09.788+0000[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Load_task', run_id='manual__2024-07-02T19:36:02.856092+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-07-02T19:36:09.788+0000[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:36:02.856092+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:36:09.818+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:36:02.856092+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:36:11.081+0000[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /workspaces/Basic-ETL-aiflow/airflow/dags/Top_sector_dag.py[0m
+[[34m2024-07-02T19:36:11.751+0000[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:36:11.770+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-07-02T19:36:11.770+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:36:11.809+0000[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:36:02.856092+00:00 [queued]> on host codespaces-3512fc[0m
+[[34m2024-07-02T19:36:12.485+0000[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Load_task', run_id='manual__2024-07-02T19:36:02.856092+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-07-02T19:36:12.490+0000[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Load_task, run_id=manual__2024-07-02T19:36:02.856092+00:00, map_index=-1, run_start_date=2024-07-02 19:36:11.877978+00:00, run_end_date=2024-07-02 19:36:12.088348+00:00, run_duration=0.21037, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=5, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-02 19:36:09.787099+00:00, queued_by_job_id=2, pid=17762[0m
+[[34m2024-07-02T19:36:12.661+0000[0m] {[34mdagrun.py:[0m819} ERROR[0m - Marking run <DagRun Sectorwise_count_dag @ 2024-07-02 19:36:02.856092+00:00: manual__2024-07-02T19:36:02.856092+00:00, state:running, queued_at: 2024-07-02 19:36:02.895183+00:00. externally triggered: True> failed[0m
+[[34m2024-07-02T19:36:12.661+0000[0m] {[34mdagrun.py:[0m901} INFO[0m - DagRun Finished: dag_id=Sectorwise_count_dag, execution_date=2024-07-02 19:36:02.856092+00:00, run_id=manual__2024-07-02T19:36:02.856092+00:00, run_start_date=2024-07-02 19:36:03.258055+00:00, run_end_date=2024-07-02 19:36:12.661618+00:00, run_duration=9.403563, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-07-02 19:36:02.856092+00:00, data_interval_end=2024-07-02 19:36:02.856092+00:00, dag_hash=75e45840807a4ff7619ab589b77e1b7f[0m
+[2024-07-02T19:36:26.241+0000] {manager.py:524} INFO - DAG ETL_dag is missing and will be deactivated.
+[2024-07-02T19:36:26.242+0000] {manager.py:536} INFO - Deactivated 1 DAGs which are no longer present in file.
+[2024-07-02T19:36:26.271+0000] {manager.py:540} INFO - Deleted DAG ETL_dag in serialized_dag table
+[2024-07-02T19:37:26.376+0000] {manager.py:524} INFO - DAG Sectorwise_countdag is missing and will be deactivated.
+[2024-07-02T19:37:26.379+0000] {manager.py:536} INFO - Deactivated 1 DAGs which are no longer present in file.
+[2024-07-02T19:37:26.412+0000] {manager.py:540} INFO - Deleted DAG Sectorwise_countdag in serialized_dag table
+[[34m2024-07-02T19:39:50.215+0000[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:39:49.461134+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:39:50.216+0000[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG Sectorwise_count_dag has 0/16 running and queued tasks[0m
+[[34m2024-07-02T19:39:50.217+0000[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:39:49.461134+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:39:50.220+0000[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:39:49.461134+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2024-07-02T19:39:50.221+0000[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:39:49.461134+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:39:50.249+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:39:49.461134+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:39:51.359+0000[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /workspaces/Basic-ETL-aiflow/airflow/dags/Top_sector_dag.py[0m
+[[34m2024-07-02T19:39:52.110+0000[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:39:52.129+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-07-02T19:39:52.130+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:39:52.169+0000[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:39:49.461134+00:00 [queued]> on host codespaces-3512fc[0m
+[[34m2024-07-02T19:39:53.203+0000[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:39:49.461134+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-07-02T19:39:53.206+0000[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Extract_task, run_id=manual__2024-07-02T19:39:49.461134+00:00, map_index=-1, run_start_date=2024-07-02 19:39:52.250123+00:00, run_end_date=2024-07-02 19:39:52.757530+00:00, run_duration=0.507407, state=success, executor_state=success, try_number=1, max_tries=0, job_id=6, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-07-02 19:39:50.217813+00:00, queued_by_job_id=2, pid=19366[0m
+[[34m2024-07-02T19:39:53.400+0000[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:39:49.461134+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:39:53.401+0000[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG Sectorwise_count_dag has 0/16 running and queued tasks[0m
+[[34m2024-07-02T19:39:53.401+0000[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:39:49.461134+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:39:53.403+0000[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:39:49.461134+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2024-07-02T19:39:53.403+0000[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Transform_task', 'manual__2024-07-02T19:39:49.461134+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:39:53.429+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Transform_task', 'manual__2024-07-02T19:39:49.461134+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:39:54.537+0000[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /workspaces/Basic-ETL-aiflow/airflow/dags/Top_sector_dag.py[0m
+[[34m2024-07-02T19:39:55.327+0000[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:39:55.346+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-07-02T19:39:55.346+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:39:55.394+0000[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:39:49.461134+00:00 [queued]> on host codespaces-3512fc[0m
+[[34m2024-07-02T19:39:56.075+0000[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:39:49.461134+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-07-02T19:39:56.079+0000[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Transform_task, run_id=manual__2024-07-02T19:39:49.461134+00:00, map_index=-1, run_start_date=2024-07-02 19:39:55.465232+00:00, run_end_date=2024-07-02 19:39:55.673530+00:00, run_duration=0.208298, state=success, executor_state=success, try_number=1, max_tries=0, job_id=7, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2024-07-02 19:39:53.402037+00:00, queued_by_job_id=2, pid=19383[0m
+[[34m2024-07-02T19:39:56.354+0000[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:39:49.461134+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:39:56.354+0000[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG Sectorwise_count_dag has 0/16 running and queued tasks[0m
+[[34m2024-07-02T19:39:56.355+0000[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:39:49.461134+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:39:56.356+0000[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Load_task', run_id='manual__2024-07-02T19:39:49.461134+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-07-02T19:39:56.357+0000[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:39:49.461134+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:39:56.383+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:39:49.461134+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:39:57.513+0000[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /workspaces/Basic-ETL-aiflow/airflow/dags/Top_sector_dag.py[0m
+[[34m2024-07-02T19:39:58.271+0000[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:39:58.290+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-07-02T19:39:58.291+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:39:58.329+0000[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:39:49.461134+00:00 [queued]> on host codespaces-3512fc[0m
+[[34m2024-07-02T19:39:59.058+0000[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Load_task', run_id='manual__2024-07-02T19:39:49.461134+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-07-02T19:39:59.061+0000[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Load_task, run_id=manual__2024-07-02T19:39:49.461134+00:00, map_index=-1, run_start_date=2024-07-02 19:39:58.402321+00:00, run_end_date=2024-07-02 19:39:58.679801+00:00, run_duration=0.27748, state=success, executor_state=success, try_number=1, max_tries=0, job_id=8, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-02 19:39:56.355520+00:00, queued_by_job_id=2, pid=19400[0m
+[[34m2024-07-02T19:39:59.323+0000[0m] {[34mdagrun.py:[0m850} INFO[0m - Marking run <DagRun Sectorwise_count_dag @ 2024-07-02 19:39:49.461134+00:00: manual__2024-07-02T19:39:49.461134+00:00, state:running, queued_at: 2024-07-02 19:39:49.470314+00:00. externally triggered: True> successful[0m
+[[34m2024-07-02T19:39:59.324+0000[0m] {[34mdagrun.py:[0m901} INFO[0m - DagRun Finished: dag_id=Sectorwise_count_dag, execution_date=2024-07-02 19:39:49.461134+00:00, run_id=manual__2024-07-02T19:39:49.461134+00:00, run_start_date=2024-07-02 19:39:50.132870+00:00, run_end_date=2024-07-02 19:39:59.323957+00:00, run_duration=9.191087, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-07-02 19:39:49.461134+00:00, data_interval_end=2024-07-02 19:39:49.461134+00:00, dag_hash=75e45840807a4ff7619ab589b77e1b7f[0m
+[[34m2024-07-02T19:40:09.605+0000[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-07-02T19:43:01.865+0000[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:43:00.404047+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:43:01.866+0000[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG Sectorwise_count_dag has 0/16 running and queued tasks[0m
+[[34m2024-07-02T19:43:01.866+0000[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:43:00.404047+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:43:01.867+0000[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:43:00.404047+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2024-07-02T19:43:01.868+0000[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:43:01.895+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Extract_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:43:03.049+0000[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /workspaces/Basic-ETL-aiflow/airflow/dags/Top_sector_dag.py[0m
+[[34m2024-07-02T19:43:03.786+0000[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:43:03.809+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-07-02T19:43:03.810+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:43:03.866+0000[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: Sectorwise_count_dag.Extract_task manual__2024-07-02T19:43:00.404047+00:00 [queued]> on host codespaces-3512fc[0m
+[[34m2024-07-02T19:43:05.198+0000[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:43:00.404047+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-07-02T19:43:05.202+0000[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Extract_task, run_id=manual__2024-07-02T19:43:00.404047+00:00, map_index=-1, run_start_date=2024-07-02 19:43:03.952437+00:00, run_end_date=2024-07-02 19:43:04.806646+00:00, run_duration=0.854209, state=success, executor_state=success, try_number=1, max_tries=0, job_id=9, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-07-02 19:43:01.866826+00:00, queued_by_job_id=2, pid=20890[0m
+[[34m2024-07-02T19:43:05.677+0000[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:43:00.404047+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:43:05.677+0000[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG Sectorwise_count_dag has 0/16 running and queued tasks[0m
+[[34m2024-07-02T19:43:05.678+0000[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:43:00.404047+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:43:05.679+0000[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:43:00.404047+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2024-07-02T19:43:05.679+0000[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Transform_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:43:05.711+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Transform_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:43:06.881+0000[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /workspaces/Basic-ETL-aiflow/airflow/dags/Top_sector_dag.py[0m
+[[34m2024-07-02T19:43:07.581+0000[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:43:07.600+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-07-02T19:43:07.601+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:43:07.640+0000[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: Sectorwise_count_dag.Transform_task manual__2024-07-02T19:43:00.404047+00:00 [queued]> on host codespaces-3512fc[0m
+[[34m2024-07-02T19:43:08.334+0000[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:43:00.404047+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-07-02T19:43:08.339+0000[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Transform_task, run_id=manual__2024-07-02T19:43:00.404047+00:00, map_index=-1, run_start_date=2024-07-02 19:43:07.714422+00:00, run_end_date=2024-07-02 19:43:07.924575+00:00, run_duration=0.210153, state=success, executor_state=success, try_number=1, max_tries=0, job_id=10, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2024-07-02 19:43:05.678608+00:00, queued_by_job_id=2, pid=20914[0m
+[[34m2024-07-02T19:43:08.541+0000[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:43:00.404047+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:43:08.541+0000[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG Sectorwise_count_dag has 0/16 running and queued tasks[0m
+[[34m2024-07-02T19:43:08.542+0000[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:43:00.404047+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:43:08.543+0000[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Load_task', run_id='manual__2024-07-02T19:43:00.404047+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-07-02T19:43:08.543+0000[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:43:08.570+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'Sectorwise_count_dag', 'Load_task', 'manual__2024-07-02T19:43:00.404047+00:00', '--local', '--subdir', 'DAGS_FOLDER/Top_sector_dag.py'][0m
+[[34m2024-07-02T19:43:09.660+0000[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /workspaces/Basic-ETL-aiflow/airflow/dags/Top_sector_dag.py[0m
+[[34m2024-07-02T19:43:10.381+0000[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:43:10.426+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-07-02T19:43:10.426+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:43:10.467+0000[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: Sectorwise_count_dag.Load_task manual__2024-07-02T19:43:00.404047+00:00 [queued]> on host codespaces-3512fc[0m
+[[34m2024-07-02T19:43:11.188+0000[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='Sectorwise_count_dag', task_id='Load_task', run_id='manual__2024-07-02T19:43:00.404047+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-07-02T19:43:11.191+0000[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=Sectorwise_count_dag, task_id=Load_task, run_id=manual__2024-07-02T19:43:00.404047+00:00, map_index=-1, run_start_date=2024-07-02 19:43:10.539096+00:00, run_end_date=2024-07-02 19:43:10.821932+00:00, run_duration=0.282836, state=success, executor_state=success, try_number=1, max_tries=0, job_id=11, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-02 19:43:08.542750+00:00, queued_by_job_id=2, pid=20930[0m
+[[34m2024-07-02T19:43:11.323+0000[0m] {[34mdagrun.py:[0m850} INFO[0m - Marking run <DagRun Sectorwise_count_dag @ 2024-07-02 19:43:00.404047+00:00: manual__2024-07-02T19:43:00.404047+00:00, state:running, queued_at: 2024-07-02 19:43:00.412672+00:00. externally triggered: True> successful[0m
+[[34m2024-07-02T19:43:11.323+0000[0m] {[34mdagrun.py:[0m901} INFO[0m - DagRun Finished: dag_id=Sectorwise_count_dag, execution_date=2024-07-02 19:43:00.404047+00:00, run_id=manual__2024-07-02T19:43:00.404047+00:00, run_start_date=2024-07-02 19:43:01.795686+00:00, run_end_date=2024-07-02 19:43:11.323793+00:00, run_duration=9.528107, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-07-02 19:43:00.404047+00:00, data_interval_end=2024-07-02 19:43:00.404047+00:00, dag_hash=75e45840807a4ff7619ab589b77e1b7f[0m
+[[34m2024-07-02T19:45:09.765+0000[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-07-02T19:50:09.930+0000[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-07-02T19:55:10.495+0000[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-07-02T19:56:49.459+0000[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: ETL_dag.Extract_task manual__2024-07-02T19:56:48.745964+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:56:49.459+0000[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG ETL_dag has 0/16 running and queued tasks[0m
+[[34m2024-07-02T19:56:49.459+0000[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: ETL_dag.Extract_task manual__2024-07-02T19:56:48.745964+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:56:49.461+0000[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='ETL_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:56:48.745964+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2024-07-02T19:56:49.461+0000[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'ETL_dag', 'Extract_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--local', '--subdir', 'DAGS_FOLDER/ETL_dag.py'][0m
+[[34m2024-07-02T19:56:49.488+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'ETL_dag', 'Extract_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--local', '--subdir', 'DAGS_FOLDER/ETL_dag.py'][0m
+[[34m2024-07-02T19:56:50.601+0000[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /workspaces/Basic-ETL-aiflow/airflow/dags/ETL_dag.py[0m
+[[34m2024-07-02T19:56:51.294+0000[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:56:51.314+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-07-02T19:56:51.314+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:56:51.363+0000[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: ETL_dag.Extract_task manual__2024-07-02T19:56:48.745964+00:00 [queued]> on host codespaces-3512fc[0m
+[[34m2024-07-02T19:56:52.766+0000[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='ETL_dag', task_id='Extract_task', run_id='manual__2024-07-02T19:56:48.745964+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-07-02T19:56:52.769+0000[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=ETL_dag, task_id=Extract_task, run_id=manual__2024-07-02T19:56:48.745964+00:00, map_index=-1, run_start_date=2024-07-02 19:56:51.518613+00:00, run_end_date=2024-07-02 19:56:52.334798+00:00, run_duration=0.816185, state=success, executor_state=success, try_number=1, max_tries=0, job_id=12, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-07-02 19:56:49.460470+00:00, queued_by_job_id=2, pid=27177[0m
+[[34m2024-07-02T19:56:52.977+0000[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: ETL_dag.Transform_task manual__2024-07-02T19:56:48.745964+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:56:52.977+0000[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG ETL_dag has 0/16 running and queued tasks[0m
+[[34m2024-07-02T19:56:52.978+0000[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: ETL_dag.Transform_task manual__2024-07-02T19:56:48.745964+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:56:52.979+0000[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='ETL_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:56:48.745964+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2024-07-02T19:56:52.979+0000[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'ETL_dag', 'Transform_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--local', '--subdir', 'DAGS_FOLDER/ETL_dag.py'][0m
+[[34m2024-07-02T19:56:53.008+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'ETL_dag', 'Transform_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--local', '--subdir', 'DAGS_FOLDER/ETL_dag.py'][0m
+[[34m2024-07-02T19:56:54.275+0000[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /workspaces/Basic-ETL-aiflow/airflow/dags/ETL_dag.py[0m
+[[34m2024-07-02T19:56:54.919+0000[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:56:54.938+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-07-02T19:56:54.938+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:56:54.977+0000[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: ETL_dag.Transform_task manual__2024-07-02T19:56:48.745964+00:00 [queued]> on host codespaces-3512fc[0m
+[[34m2024-07-02T19:56:55.691+0000[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='ETL_dag', task_id='Transform_task', run_id='manual__2024-07-02T19:56:48.745964+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-07-02T19:56:55.694+0000[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=ETL_dag, task_id=Transform_task, run_id=manual__2024-07-02T19:56:48.745964+00:00, map_index=-1, run_start_date=2024-07-02 19:56:55.074437+00:00, run_end_date=2024-07-02 19:56:55.280383+00:00, run_duration=0.205946, state=success, executor_state=success, try_number=1, max_tries=0, job_id=13, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2024-07-02 19:56:52.978614+00:00, queued_by_job_id=2, pid=27195[0m
+[[34m2024-07-02T19:56:55.855+0000[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: ETL_dag.Load_task manual__2024-07-02T19:56:48.745964+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:56:55.856+0000[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG ETL_dag has 0/16 running and queued tasks[0m
+[[34m2024-07-02T19:56:55.856+0000[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: ETL_dag.Load_task manual__2024-07-02T19:56:48.745964+00:00 [scheduled]>[0m
+[[34m2024-07-02T19:56:55.858+0000[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='ETL_dag', task_id='Load_task', run_id='manual__2024-07-02T19:56:48.745964+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-07-02T19:56:55.858+0000[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'ETL_dag', 'Load_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--local', '--subdir', 'DAGS_FOLDER/ETL_dag.py'][0m
+[[34m2024-07-02T19:56:55.896+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'ETL_dag', 'Load_task', 'manual__2024-07-02T19:56:48.745964+00:00', '--local', '--subdir', 'DAGS_FOLDER/ETL_dag.py'][0m
+[[34m2024-07-02T19:56:57.031+0000[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /workspaces/Basic-ETL-aiflow/airflow/dags/ETL_dag.py[0m
+[[34m2024-07-02T19:56:57.769+0000[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:56:57.789+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-07-02T19:56:57.789+0000[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-07-02T19:56:57.828+0000[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: ETL_dag.Load_task manual__2024-07-02T19:56:48.745964+00:00 [queued]> on host codespaces-3512fc[0m
+[[34m2024-07-02T19:56:58.598+0000[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='ETL_dag', task_id='Load_task', run_id='manual__2024-07-02T19:56:48.745964+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-07-02T19:56:58.601+0000[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=ETL_dag, task_id=Load_task, run_id=manual__2024-07-02T19:56:48.745964+00:00, map_index=-1, run_start_date=2024-07-02 19:56:57.896394+00:00, run_end_date=2024-07-02 19:56:58.173801+00:00, run_duration=0.277407, state=success, executor_state=success, try_number=1, max_tries=0, job_id=14, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-07-02 19:56:55.857310+00:00, queued_by_job_id=2, pid=27230[0m
+[[34m2024-07-02T19:56:58.764+0000[0m] {[34mdagrun.py:[0m850} INFO[0m - Marking run <DagRun ETL_dag @ 2024-07-02 19:56:48.745964+00:00: manual__2024-07-02T19:56:48.745964+00:00, state:running, queued_at: 2024-07-02 19:56:48.779967+00:00. externally triggered: True> successful[0m
+[[34m2024-07-02T19:56:58.765+0000[0m] {[34mdagrun.py:[0m901} INFO[0m - DagRun Finished: dag_id=ETL_dag, execution_date=2024-07-02 19:56:48.745964+00:00, run_id=manual__2024-07-02T19:56:48.745964+00:00, run_start_date=2024-07-02 19:56:49.383521+00:00, run_end_date=2024-07-02 19:56:58.765086+00:00, run_duration=9.381565, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-07-02 19:56:48.745964+00:00, data_interval_end=2024-07-02 19:56:48.745964+00:00, dag_hash=7e74db8a8c0a205ae15cf29ddbcb5f2d[0m
